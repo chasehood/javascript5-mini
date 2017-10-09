@@ -5,17 +5,19 @@ import FoodItem from './FoodItem';
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super();
     this.state = {
-      favoriteFoods: ['lettuce', 'carrots', 'beets', 'beans', 'air']
+      favoriteFoods: ['lettuce',
+                      'carrots',
+                      'beets',
+                      'beans',
+                      'air']
     }
   }
   render() {
-
-    const favFoods = this.state.favoriteFoods.map( item, i => {
-        return <FoodItem foodItem={item}/>
+    const favFoods = this.state.favoriteFoods.map( (item, i)  => {
+      return <FoodItem key={i} foodItem={item}/>
     })
-
     return (
       <div className="App">
         <h1>My Favorite Food List:</h1>

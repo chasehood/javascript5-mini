@@ -1,7 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-export default function FoodItem () {
-    return (
-        <p>{props.foodItem}</p>
-    )
+class FoodItem extends Component{
+    
+    render(){
+        return (
+            <p>{this.props.foodItem}</p>
+        )
+    }
 }
+
+export default FoodItem
